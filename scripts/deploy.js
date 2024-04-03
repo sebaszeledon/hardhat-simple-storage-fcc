@@ -1,4 +1,4 @@
-const {ethers, run, network} = require("hardhat"); //8:41:42
+const {ethers, run, network} = require("hardhat");
 
 //Install prettier: 
 
