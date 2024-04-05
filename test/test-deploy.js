@@ -24,5 +24,15 @@ describe("SimpleStorage", function () {
     });
     // Command to look for keyword: yarn hardhat test --grep store
     // Also, adding in the code it.only will run a specific part of the test
+    it("Should get person and their favorite number", async function (){
+        const expectedName = "Sebas";
+        const expectedNumber = "8";
+        const transactionResponse = await simpleStorage.addPerson(expectedName, expectedNumber);
+        await transactionResponse.wait(1);
+        const { favoriteNumber, name } = await simpleStorage.people(0);
+
+        assert.equal(expectedName, name);
+        assert.equal(expectedNumber, favoriteNumber);
+    });
 
 });
