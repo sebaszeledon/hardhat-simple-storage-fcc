@@ -1,4 +1,4 @@
-# My first Hardhat Project
+# My First Hardhat Project
 
 This project demonstrates a basic Hardhat use case using Javascript.
 
